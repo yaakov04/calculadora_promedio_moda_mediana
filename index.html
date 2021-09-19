@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora de promedio</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor header">
+            <h1>Calculadora de promedio</h1>
+        </div>
+    </header>
+    <main>
+        <span id="resultado" class="titulo_resultado">Resultado:</span>
+        <span class="resultado">-----</span>
+        <div>
+            <section>
+                <h2>Caclula el promedio</h2>
+                <div class="formulario contenedor">
+                    <form onkeydown="presionarEnter(this);return event.key !=' Enter ';" action="">
+                        <fieldset>
+
+                            <div class="input">
+                                <label for="lista">Introduce los numeros separado por comas:</label>
+                                <textarea id="lista" placeholder="Ejemplo: 7,8,8,8" required></textarea>
+                            </div>
+                        </fieldset>
+                        <div class="btn_contendor">
+                            <button data-boton="calcular" data-tipo="promedio">Calcular promedio</button>
+                            <button data-boton="calcular" data-tipo="mediana">Calcular Mediana</button>
+                            <button data-boton="calcular" data-tipo="moda">Calcular Moda</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
